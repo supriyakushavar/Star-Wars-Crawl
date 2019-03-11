@@ -1,0 +1,42 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+.content-wrap{
+    perspective: 400px;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    width: 300px;
+    margin: 0 auto;
+    background: #000;
+}
+
+.content{
+    position: relative;
+    top: -100px;
+    transform-origin: 50% 100%;
+    font-size: 20px;
+    animation: example 60s linear;
+    color:yellow;
+    font-size: 25px;
+    line-height: 2;
+    animation-iteration-count: 3;
+}
+
+@keyframes example{
+    0%{
+        top:0;
+        transform: rotateX(20deg) translateZ(0);
+    }
+    100%{
+        top:-6000px;
+        transform: rotateX(25deg) translateZ(-2500px);
+    }
+}
+
+
